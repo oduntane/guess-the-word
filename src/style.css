@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: unset;
+    padding: unset;
+}
+
+:root {
+    --color-purple-emperor: #7429C6;
+    --color-bubblegum-pink: #C951E7;
+    --color-imperial: #672171;
+    --color-fly-by-night: #4A5567;
+    --color-robotic-gods: #97A3B6;
+    --color-obsidian-shard: #030616;
+    --color-dark-knight: #171E30;
+    --color-chefs-hat: #F2F5F9;
+    font-size: 16px;
+}
+
+
+body {
+    min-height: 100vh;
+    background-image: url("/bg-guess-the-word.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: Outfit, sans-serif;
+}
+
+#app {
+    background-color: var(--color-dark-knight);
+    border-radius: 0.8em;
+    padding: 24px 26px 32px;
+    max-width: 370px;
+}
+
+.text-large {
+    font-size: 32px;
+}
+
+.text-medium {
+    font-size: 20px;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+.text-button {
+    font-size: 14px;
+}
+
+.logo {
+    display: block;
+    margin-inline: auto;
+    margin-block-end: 24px;
+}
+
+#word-display {
+    background-color: var(--color-fly-by-night);
+    color: var(--color-chefs-hat);
+    text-align: center;
+    letter-spacing: 0.625em;
+    padding-block: 12px;
+    border-radius: 0.4em;
+    margin-block-end: 24px;
+    box-shadow: 0 4px 0 0 #030616;
+}
+
+#trials {
+    color: var(--color-chefs-hat);
+    display: inline-block;
+    width: 50%;
+    font-weight: 500;
+}
+
+#trial-progress {
+    display: inline-flex;
+    gap: 4px;
+    margin-left: 10px;
+    /*vertical-align: 15%;*/
+}
+
+#trial-progress > span {
+    background-color: var(--color-fly-by-night);
+    width: 5px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+#trial-progress > span.completed {
+    background-color: var(--color-purple-emperor);
+}
+
+#mistakes {
+    width: 50%;
+    color:  var(--color-chefs-hat);
+}
+
+.warning {
+    margin-bottom: 52px;
+    text-align: center;
+}
+
+#input-display {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 52px;
+    flex-wrap: wrap;
+}
+
+#input-display input[type="text"] {
+    padding: 6px 16px;
+    max-width: 52px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--color-fly-by-night);
+    background-color: inherit;
+    border-radius: 0.5em;
+    color: var(--color-chefs-hat);
+    text-align: center;
+    font-size: inherit;
+}
+
+
+#input-display input[type="text"].current:focus {
+    border-color: var(--color-bubblegum-pink);
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    padding-inline: 57px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.buttons button {
+    padding: 14px 37px;
+    background-color: var(--color-bubblegum-pink);
+    color: var(--color-chefs-hat);
+    border: none;
+    border-radius: 0.6em;
+    font-size: inherit;
+    filter: drop-shadow(0 4px 0 #7b248a);
+}
